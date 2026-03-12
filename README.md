@@ -50,17 +50,17 @@ news-data-engineering
 ├── bigquery
 │   └── bigquery_client.py   # Cliente para comunicação com BigQuery
 │
-├── cleaner
-│   └── cleaner.py           # Limpeza de HTML dos artigos
-│
 ├── config
-│   └── config.py            # Configurações e variáveis de ambiente
+│   └── config.py           # Configurações e variáveis de ambiente
 │
 ├── crawler
 │   ├── items.py
 │   ├── pipelines.py
 │   └── spiders
 │       └── news_spider.py   # Spider responsável pelo scraping
+│
+├── data_processing
+│   └── cleaner.py           # Limpeza de HTML dos artigos
 │
 ├── scrapy.cfg
 ├── requirements.txt
