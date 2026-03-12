@@ -210,7 +210,9 @@ FastAPI gera documentação automaticamente:
 http://127.0.0.1:8000/docs
 ```
 
-https://github.com/user-attachments/assets/12b52753-c9cc-4076-bc9d-a0ca3f5d232c
+## 📺 Demonstração (API em funcionamento)
+<video src="https://github.com/user-attachments/assets/12b52753-c9cc-4076-bc9d-a0ca3f5d232c" controls="controls" style="max-width: 100%;">
+</video>
 
 ---
 
