@@ -1,9 +1,20 @@
 # News Data Engineering Pipeline
 
-Pipeline de engenharia de dados responsável por **coletar, processar, armazenar e disponibilizar notícias para busca**.
+Este projeto foi desenvolvido como parte de um desafio técnico para a vaga de Estágio em Engenharia de Dados e Analytics.
 
-O projeto utiliza **web scraping, processamento de dados e uma API de busca**, demonstrando um fluxo completo de engenharia de dados.
+O objetivo principal foi criar um fluxo que automatiza todo o caminho da informação, desde a captura até a entrega:
 
+Coleta: Um crawler que acessa um site de notícias e busca os artigos.
+
+Tratamento: Limpeza do texto e extração apenas do que é importante.
+
+Armazenamento: Envio dos dados estruturados para o Google BigQuery.
+
+Consulta: Criação de uma API para pesquisar os artigos salvos no banco.
+
+Esse projeto me permitiu aplicar conceitos de ciclo de vida do dado, lidando com ingestão, processamento e disponibilização (ponta a ponta).
+
+Muito obrigado pela oportunidade!
 ---
 
 # Arquitetura do Projeto
