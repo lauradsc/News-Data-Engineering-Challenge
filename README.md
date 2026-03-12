@@ -224,6 +224,7 @@ Cada artigo armazenado no BigQuery possui os seguintes campos:
 * published_at
 * scraped_at
 
+<img width="1601" height="579" alt="Captura de tela 2026-03-12 094220" src="https://github.com/user-attachments/assets/1a01e6d5-8a17-48fb-9dc9-bdcdc6456728" />
 ---
 
 ## Estrutura de Dados no BigQuery
@@ -235,6 +236,8 @@ O projeto utiliza duas tabelas no BigQuery para separar diferentes etapas do pip
 
 Essa separação segue uma prática comum em engenharia de dados, onde os dados brutos são preservados para possibilitar reprocessamento ou auditoria, enquanto a tabela limpa é utilizada pela API de busca para garantir melhor qualidade e consistência nos resultados.
 
+<img width="1600" height="573" alt="Captura de tela 2026-03-12 094355" src="https://github.com/user-attachments/assets/723fd512-6a5a-4a46-881e-0fd0943c3c3f" />
+<img width="1598" height="721" alt="Captura de tela 2026-03-12 094444" src="https://github.com/user-attachments/assets/6aee2691-0af6-4ec1-aac4-45e7f968df0e" />
 
 # Possíveis Melhorias Futuras
 
