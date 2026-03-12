@@ -1,12 +1,23 @@
-# News Data Engineering Pipeline
+# News Data Engineering Pipeline 💻
 
-Pipeline de engenharia de dados responsável por **coletar, processar, armazenar e disponibilizar notícias para busca**.
+Este projeto foi desenvolvido como parte de um desafio técnico para a vaga de Estágio em Engenharia de Dados e Analytics.
 
-O projeto utiliza **web scraping, processamento de dados e uma API de busca**, demonstrando um fluxo completo de engenharia de dados.
+O objetivo principal foi criar um fluxo que automatiza todo o caminho da informação, desde a captura até a entrega:
 
+Coleta: Um crawler que acessa um site de notícias e busca os artigos.
+
+Tratamento: Limpeza do texto e extração apenas do que é importante.
+
+Armazenamento: Envio dos dados estruturados para o Google BigQuery.
+
+Consulta: Criação de uma API para pesquisar os artigos salvos no banco.
+
+Esse projeto me permitiu aplicar conceitos de ciclo de vida do dado, lidando com ingestão, processamento e disponibilização (ponta a ponta).
+
+Muito obrigado pela oportunidade! 😄
 ---
 
-# Arquitetura do Projeto
+# Arquitetura do Projeto 🗃️
 
 O pipeline segue o seguinte fluxo:
 
@@ -39,7 +50,7 @@ Consulta por palavras-chave
 
 ---
 
-# Estrutura do Projeto
+# Estrutura do Projeto 📁
 
 ```
 news-data-engineering
@@ -50,17 +61,17 @@ news-data-engineering
 ├── bigquery
 │   └── bigquery_client.py   # Cliente para comunicação com BigQuery
 │
-├── cleaner
-│   └── cleaner.py           # Limpeza de HTML dos artigos
-│
 ├── config
-│   └── config.py            # Configurações e variáveis de ambiente
+│   └── config.py           # Configurações e variáveis de ambiente
 │
 ├── crawler
 │   ├── items.py
 │   ├── pipelines.py
 │   └── spiders
 │       └── news_spider.py   # Spider responsável pelo scraping
+│
+├── data_processing
+│   └── cleaner.py           # Limpeza de HTML dos artigos
 │
 ├── scrapy.cfg
 ├── requirements.txt
@@ -79,7 +90,7 @@ news-data-engineering
 
 ---
 
-# Como Executar o Projeto
+# Como Executar o Projeto 🖱️
 
 ## 1. Clonar o repositório
 
@@ -116,7 +127,7 @@ pip install -r requirements.txt
 
 ---
 
-## 4. Configurar variáveis de ambiente
+## 4. Configurar variáveis de ambiente ⚙️
 
 Crie um arquivo `.env` na raiz do projeto:
 
@@ -145,7 +156,7 @@ O spider irá:
 
 ---
 
-# Executando a API de Busca
+# Executando a API de Busca 🔎
 
 Inicie a API com:
 
@@ -166,7 +177,7 @@ http://127.0.0.1:8000
 Buscar artigos contendo uma palavra-chave:
 
 ```
-GET /search?keyword=technology
+GET /search?keyword=economy
 ```
 
 Exemplo:
@@ -199,9 +210,13 @@ FastAPI gera documentação automaticamente:
 http://127.0.0.1:8000/docs
 ```
 
+## 📺 Demonstração (API em funcionamento)
+<video src="https://github.com/user-attachments/assets/12b52753-c9cc-4076-bc9d-a0ca3f5d232c" controls="controls" style="max-width: 100%;">
+</video>
+
 ---
 
-# Estrutura dos Dados
+# Estrutura dos Dados 
 
 Cada artigo armazenado no BigQuery possui os seguintes campos:
 
@@ -213,9 +228,10 @@ Cada artigo armazenado no BigQuery possui os seguintes campos:
 * published_at
 * scraped_at
 
+<img width="1601" height="579" alt="Captura de tela 2026-03-12 094220" src="https://github.com/user-attachments/assets/1a01e6d5-8a17-48fb-9dc9-bdcdc6456728" />
 ---
 
-## Estrutura de Dados no BigQuery
+## Estrutura de Dados no BigQuery 
 
 O projeto utiliza duas tabelas no BigQuery para separar diferentes etapas do pipeline de dados:
 
@@ -224,12 +240,16 @@ O projeto utiliza duas tabelas no BigQuery para separar diferentes etapas do pip
 
 Essa separação segue uma prática comum em engenharia de dados, onde os dados brutos são preservados para possibilitar reprocessamento ou auditoria, enquanto a tabela limpa é utilizada pela API de busca para garantir melhor qualidade e consistência nos resultados.
 
+<img width="1600" height="573" alt="Captura de tela 2026-03-12 094355" src="https://github.com/user-attachments/assets/723fd512-6a5a-4a46-881e-0fd0943c3c3f" />
+<img width="1598" height="721" alt="Captura de tela 2026-03-12 094444" src="https://github.com/user-attachments/assets/6aee2691-0af6-4ec1-aac4-45e7f968df0e" />
 
-# Possíveis Melhorias Futuras
+🚀 Próximos Passos & Melhorias
+Reconheço pontos onde o pipeline pode evoluir para um cenário de produção:
 
-* Adicionar ranking de relevância na busca
-* Implementar cache de consultas
-* Criar dashboard analítico com os dados
-* Expandir coleta para múltiplas fontes de notícias
+Relevância da Busca: Atualmente a busca é por palavra-chave exata, o que gera alguns resultados fora de contexto. O próximo passo seria implementar Busca Semântica ou ranking de relevância.
+
+Eficiência e Custo: Implementar uma camada de cache para evitar consultas repetitivas ao BigQuery, reduzindo latência e custos de nuvem.
+
+Escalabilidade: Modularizar o crawler para suportar múltiplas fontes de notícias com diferentes estruturas de HTML de forma genérica.
 
 ---
