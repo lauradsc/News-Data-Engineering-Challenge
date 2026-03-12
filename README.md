@@ -47,6 +47,7 @@ Consulta por palavras-chave
 * Readability
 * Uvicorn
 * dotenv
+* Insomnia
 
 ---
 
