@@ -243,10 +243,13 @@ Essa separação segue uma prática comum em engenharia de dados, onde os dados 
 <img width="1600" height="573" alt="Captura de tela 2026-03-12 094355" src="https://github.com/user-attachments/assets/723fd512-6a5a-4a46-881e-0fd0943c3c3f" />
 <img width="1598" height="721" alt="Captura de tela 2026-03-12 094444" src="https://github.com/user-attachments/assets/6aee2691-0af6-4ec1-aac4-45e7f968df0e" />
 
-# 🚀 Próximos Passos & Melhorias
+🚀 Próximos Passos & Melhorias
+Reconheço pontos onde o pipeline pode evoluir para um cenário de produção:
 
-* Adicionar ranking de relevância na busca
-* Implementar cache de consultas
-* Expandir coleta para múltiplas fontes de notícias
+Relevância da Busca: Atualmente a busca é por palavra-chave exata, o que gera alguns resultados fora de contexto. O próximo passo seria implementar Busca Semântica ou ranking de relevância.
+
+Eficiência e Custo: Implementar uma camada de cache para evitar consultas repetitivas ao BigQuery, reduzindo latência e custos de nuvem.
+
+Escalabilidade: Modularizar o crawler para suportar múltiplas fontes de notícias com diferentes estruturas de HTML de forma genérica.
 
 ---
