@@ -229,7 +229,6 @@ Essa separação segue uma prática comum em engenharia de dados, onde os dados 
 
 * Adicionar ranking de relevância na busca
 * Implementar cache de consultas
-* Criar dashboard analítico com os dados
 * Expandir coleta para múltiplas fontes de notícias
 
 ---
