@@ -1,4 +1,4 @@
-# News Data Engineering Pipeline
+# News Data Engineering Pipeline 💻
 
 Este projeto foi desenvolvido como parte de um desafio técnico para a vaga de Estágio em Engenharia de Dados e Analytics.
 
@@ -14,10 +14,10 @@ Consulta: Criação de uma API para pesquisar os artigos salvos no banco.
 
 Esse projeto me permitiu aplicar conceitos de ciclo de vida do dado, lidando com ingestão, processamento e disponibilização (ponta a ponta).
 
-Muito obrigado pela oportunidade!
+Muito obrigado pela oportunidade! 😄
 ---
 
-# Arquitetura do Projeto
+# Arquitetura do Projeto 🗃️
 
 O pipeline segue o seguinte fluxo:
 
@@ -50,7 +50,7 @@ Consulta por palavras-chave
 
 ---
 
-# Estrutura do Projeto
+# Estrutura do Projeto 📁
 
 ```
 news-data-engineering
@@ -90,7 +90,7 @@ news-data-engineering
 
 ---
 
-# Como Executar o Projeto
+# Como Executar o Projeto 🖱️
 
 ## 1. Clonar o repositório
 
@@ -127,7 +127,7 @@ pip install -r requirements.txt
 
 ---
 
-## 4. Configurar variáveis de ambiente
+## 4. Configurar variáveis de ambiente ⚙️
 
 Crie um arquivo `.env` na raiz do projeto:
 
@@ -156,7 +156,7 @@ O spider irá:
 
 ---
 
-# Executando a API de Busca
+# Executando a API de Busca 🔎
 
 Inicie a API com:
 
@@ -177,7 +177,7 @@ http://127.0.0.1:8000
 Buscar artigos contendo uma palavra-chave:
 
 ```
-GET /search?keyword=technology
+GET /search?keyword=economy
 ```
 
 Exemplo:
@@ -212,7 +212,7 @@ http://127.0.0.1:8000/docs
 
 ---
 
-# Estrutura dos Dados
+# Estrutura dos Dados 
 
 Cada artigo armazenado no BigQuery possui os seguintes campos:
 
@@ -227,7 +227,7 @@ Cada artigo armazenado no BigQuery possui os seguintes campos:
 <img width="1601" height="579" alt="Captura de tela 2026-03-12 094220" src="https://github.com/user-attachments/assets/1a01e6d5-8a17-48fb-9dc9-bdcdc6456728" />
 ---
 
-## Estrutura de Dados no BigQuery
+## Estrutura de Dados no BigQuery 
 
 O projeto utiliza duas tabelas no BigQuery para separar diferentes etapas do pipeline de dados:
 
@@ -239,7 +239,7 @@ Essa separação segue uma prática comum em engenharia de dados, onde os dados 
 <img width="1600" height="573" alt="Captura de tela 2026-03-12 094355" src="https://github.com/user-attachments/assets/723fd512-6a5a-4a46-881e-0fd0943c3c3f" />
 <img width="1598" height="721" alt="Captura de tela 2026-03-12 094444" src="https://github.com/user-attachments/assets/6aee2691-0af6-4ec1-aac4-45e7f968df0e" />
 
-# Possíveis Melhorias Futuras
+# 🚀 Próximos Passos & Melhorias
 
 * Adicionar ranking de relevância na busca
 * Implementar cache de consultas
